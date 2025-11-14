@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="create Login_form.fxml UI">
+    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="update Login_form.fxml UI">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/db/DBConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/mainController/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/mainController/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,9 +50,10 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "D:/FX-projects/thogakade-management-system/src/main/java/edu/icet/Main.java",
     "project.structure.last.edited": "Project",
@@ -105,12 +105,29 @@
       <option name="project" value="LOCAL" />
       <updated>1763140267056</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update Login_form.fxml UI">
+      <option name="closed" value="true" />
+      <created>1763143480702</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763143480702</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update Login_form.fxml UI">
+      <option name="closed" value="true" />
+      <created>1763143524289</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763143524289</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sync dependancies and create starter class" />
     <MESSAGE value="create Login_form.fxml UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="create Login_form.fxml UI" />
+    <MESSAGE value="update Login_form.fxml UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Login_form.fxml UI" />
   </component>
 </project>
