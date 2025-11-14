@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="950.0" style="-fx-background-color: #f0fdf4;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.mainController.LogInController">
+    <children>
+        <!-- Left Side - Image Panel -->
+        <AnchorPane prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: #16a34a;">
+            <children>
+                <ImageView fitHeight="600.0" fitWidth="475.0" opacity="0.31" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/photo-1578916171728-46686eac8d58.jpg" />
+                    </image>
+                </ImageView>
+
+                <!-- Overlay Content -->
+                <Rectangle fill="#15803d" height="606.0" opacity="0.32" width="475.0" />
+
+                <!-- Logo Section -->
+                <Circle fill="#86efac" layoutX="52.0" layoutY="273.0" opacity="0.25" radius="42.0" />
+                <Text fill="WHITE" layoutX="100.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thogakade">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Text>
+                <Text fill="#bbf7d0" layoutX="100.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shop Management Pro">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+
+                <!-- Main Content -->
+                <Text fill="WHITE" layoutX="40.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart Retail" wrappingWidth="390.0">
+                    <font>
+                        <Font name="System Bold" size="44.0" />
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="40.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solutions" wrappingWidth="390.0">
+                    <font>
+                        <Font name="System Bold" size="44.0" />
+                    </font>
+                </Text>
+
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#86efac" height="5.0" layoutX="40.0" layoutY="268.0" width="90.0" />
+
+                <Text fill="#f5ffe2" layoutX="40.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Streamline your shop operations with our powerful, easy-to-use management system. Everything you need in one place." wrappingWidth="390.0">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Text>
+
+                <!-- Feature Items -->
+                <Circle fill="#fbbf24" layoutX="52.0" layoutY="395.0" radius="7.0" />
+                <Text fill="WHITE" layoutX="72.0" layoutY="402.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lightning-fast billing system">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+
+                <Circle fill="#fbbf24" layoutX="52.0" layoutY="432.0" radius="7.0" />
+                <Text fill="WHITE" layoutX="72.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Smart inventory management">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+
+                <Circle fill="#fbbf24" layoutX="52.0" layoutY="469.0" radius="7.0" />
+                <Text fill="WHITE" layoutX="72.0" layoutY="476.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer loyalty tracking">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+
+                <Circle fill="#fbbf24" layoutX="52.0" layoutY="506.0" radius="7.0" />
+                <Text fill="WHITE" layoutX="72.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Detailed sales analytics">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+
+                <!-- Decorative Elements -->
+                <Circle fill="#86efac" layoutX="389.0" layoutY="123.0" opacity="0.15" radius="60.0" />
+                <Circle fill="#bbf7d0" layoutX="380.0" layoutY="500.0" opacity="0.1" radius="45.0" />
+            <ImageView fitHeight="59.0" fitWidth="62.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202025-10-10%20230012.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+
+        <!-- Right Side - Login Form -->
+        <AnchorPane layoutX="480.0" prefHeight="600.0" prefWidth="475.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <!-- Top Badge -->
+                <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#dcfce7" height="36.0" layoutX="345.0" layoutY="27.0" stroke="#86efac" strokeWidth="2.0" width="105.0" />
+                <Text fill="#16a34a" layoutX="370.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="🔐 Secure">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Text>
+
+                <!-- Form Container -->
+                <AnchorPane layoutX="60.0" layoutY="105.0" prefHeight="430.0" prefWidth="355.0">
+                    <children>
+                        <!-- Header -->
+                        <Text fill="#0f172a" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome Back!">
+                            <font>
+                                <Font name="System Bold" size="40.0" />
+                            </font>
+                        </Text>
+                        <Rectangle arcHeight="3.0" arcWidth="3.0" fill="#22c55e" height="4.0" layoutY="58.0" width="70.0" />
+
+                        <Text fill="#64748b" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in to access your shop dashboard">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </Text>
+
+                        <!-- Username Field -->
+                        <Text fill="#374151" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <TextField fx:id="txtUsername" layoutY="155.0" onAction="#userNameOnAction" prefHeight="52.0" prefWidth="355.0" promptText="Enter your username" style="-fx-background-color: #f0fdf4; -fx-background-radius: 12; -fx-text-fill: #0f172a; -fx-prompt-text-fill: #94a3b8; -fx-padding: 16; -fx-border-color: #86efac; -fx-border-width: 2; -fx-border-radius: 12;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </TextField>
+
+                        <!-- Password Field -->
+                        <Text fill="#374151" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Text>
+                        <PasswordField fx:id="txtPassword" layoutY="245.0" onAction="#checkPasswordOnAction" prefHeight="52.0" prefWidth="355.0" promptText="Enter your password" style="-fx-background-color: #f0fdf4; -fx-background-radius: 12; -fx-text-fill: #0f172a; -fx-prompt-text-fill: #94a3b8; -fx-padding: 16; -fx-border-color: #86efac; -fx-border-width: 2; -fx-border-radius: 12;">
+                            <font>
+                                <Font size="15.0" />
+                            </font>
+                        </PasswordField>
+
+                        <!-- Forgot Password -->
+                        <Hyperlink layoutX="215.0" layoutY="304.0" text="Forgot password?" textFill="#16a34a">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Hyperlink>
+
+                        <!-- Login Button -->
+                        <Button layoutY="345.0" mnemonicParsing="false" onAction="#btnLogInOnAction" prefHeight="54.0" prefWidth="355.0" style="-fx-background-color: linear-gradient(to right, #22c55e, #16a34a); -fx-background-radius: 13; -fx-cursor: hand;" text="Sign In to Dashboard →" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="17.0" />
+                            </font>
+                            <effect>
+                                <DropShadow color="#22c55e55" radius="18.0" spread="0.3" />
+                            </effect>
+                        </Button>
+
+                        <!-- Divider -->
+                        <Text fill="#94a3b8" layoutX="152.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OR">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Text>
+                        <Rectangle fill="#d1d5db" height="2.0" layoutY="420.0" width="130.0" />
+                        <Rectangle fill="#d1d5db" height="2.0" layoutX="225.0" layoutY="420.0" width="130.0" />
+
+                        <!-- Sign Up Link -->
+                        <Text fill="#64748b" layoutX="58.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't have an account?">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Text>
+                        <Hyperlink layoutX="203.0" layoutY="430.0" onAction="#btnSignInOnAction" text="Sign Up" textFill="#16a34a">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </AnchorPane>
+
+                <!-- Footer Text -->
+                <Text fill="#94a3b8" layoutX="144.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="© 2024 Thogakade. All rights reserved.">
+                    <font>
+                        <Font size="11.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
