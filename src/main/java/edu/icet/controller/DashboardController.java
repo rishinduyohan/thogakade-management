@@ -82,7 +82,8 @@ public class DashboardController {
 
     @FXML
     void btnItemsOnAction(ActionEvent event) {
-
+        updateActiveButton(btnItems);
+        setUi("/view/Item_form.fxml");
     }
 
     @FXML
