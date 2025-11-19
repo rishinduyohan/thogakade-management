@@ -16,16 +16,37 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public boolean addItem(ItemDTO itemDTO) {
+        try {
+            if (itemRepository.addItem(itemDTO)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
         return false;
     }
 
     @Override
     public boolean updateItem(String id, ItemDTO itemDTO) {
+        try {
+            if (itemRepository.updateItem(id,itemDTO)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
         return false;
     }
 
     @Override
     public boolean deleteItem(String id) {
+        try {
+            if (itemRepository.deleteItem(id)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.ERROR, e.getMessage()).show();
+        }
         return false;
     }
 

@@ -55,24 +55,49 @@ public class ItemController implements Initializable {
     @FXML
     private TextField txtUnitPrice;
 
+    public ItemDTO getCurrentItem(){
+         String itemCode = txtItemCode.getText();
+         String description = txtDescription.getText();
+         String packSize = txtPackSize.getText();
+         double unitPrice = Double.parseDouble(txtUnitPrice.getText());
+         int qtyOnHand = Integer.parseInt(txtQty.getText());
+
+         return new ItemDTO(itemCode,description,packSize,unitPrice,qtyOnHand);
+    }
     @FXML
     void btnAddOnAction(ActionEvent event) {
-
+        if (itemService.addItem(getCurrentItem())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Item added!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @FXML
     void btnClearOnAction(ActionEvent event) {
-
+        txtItemCode.setText("");
+        txtDescription.setText("");
+        txtPackSize.setText("");
+        txtUnitPrice.setText("");
+        txtQty.setText("");
     }
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
+        if (itemService.deleteItem(txtItemCode.getText())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Item deleted!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-
+        if (itemService.updateItem(txtItemCode.getText(),getCurrentItem())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Item updated!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @Override
