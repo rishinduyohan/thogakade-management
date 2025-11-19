@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="">
+    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="update Login_form.fxml UI">
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/db/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +17,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -23,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "rishinduyohan"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;rishinduyohan&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/rishinduyohan/thogakade-management.git",
-    "accountId": "8e3e3521-f005-4860-9bf3-d44adca308da"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/rishinduyohan/thogakade-management.git&quot;,
+    &quot;accountId&quot;: &quot;8e3e3521-f005-4860-9bf3-d44adca308da&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="35QpXBKF05wN1cKbqUEu478IOe0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,9 +50,15 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "D:/FX-projects/thogakade-management-system/src/main/java/edu/icet/Main.java"
+    "onboarding.tips.debug.path": "D:/FX-projects/thogakade-management-system/src/main/java/edu/icet/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="RunManager">
@@ -81,6 +89,45 @@
       <option name="presentableId" value="Default" />
       <updated>1763052188440</updated>
     </task>
+    <task id="LOCAL-00001" summary="sync dependancies and create starter class">
+      <option name="closed" value="true" />
+      <created>1763052825298</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763052825298</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create Login_form.fxml UI">
+      <option name="closed" value="true" />
+      <created>1763140267056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763140267056</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update Login_form.fxml UI">
+      <option name="closed" value="true" />
+      <created>1763143480702</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763143480702</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update Login_form.fxml UI">
+      <option name="closed" value="true" />
+      <created>1763143524289</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763143524289</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="sync dependancies and create starter class" />
+    <MESSAGE value="create Login_form.fxml UI" />
+    <MESSAGE value="update Login_form.fxml UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Login_form.fxml UI" />
   </component>
 </project>
