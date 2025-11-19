@@ -1,12 +1,13 @@
 package edu.icet.model.dto;
 
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-@ToString
 @AllArgsConstructor
-@NoArgsConstructor
 public class CustomerDTO {
     private String id;
     private String title;
