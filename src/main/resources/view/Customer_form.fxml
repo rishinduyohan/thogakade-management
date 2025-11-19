@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,12 +15,12 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="customerPane" prefHeight="702.0" prefWidth="1061.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.mainController.CustomerController">
+<AnchorPane fx:id="customerPane" prefHeight="702.0" prefWidth="1015.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.CustomerController">
 
-    <Label layoutX="30.0" layoutY="30.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f2937;" text="Customer Management" />
+    <Label layoutX="30.0" layoutY="24.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f2937;" text="Customer Management" />
     <Label layoutX="30.0" layoutY="60.0" style="-fx-font-size: 13px; -fx-text-fill: #6b7280;" text="Manage customer records, add new profiles, and update existing details." />
 
-    <VBox layoutX="30.0" layoutY="100.0" prefHeight="250.0" prefWidth="930.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
+    <VBox layoutX="30.0" layoutY="100.0" prefHeight="281.0" prefWidth="930.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
         <effect>
             <DropShadow color="#00000011" radius="8.0" spread="0.1" />
         </effect>
@@ -25,48 +29,109 @@
         <Separator prefWidth="200.0" />
 
         <HBox spacing="20.0">
+         <VBox spacing="5.0">
+            <children>
+               <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Customer ID" />
+               <TextField fx:id="txtCusId" prefHeight="27.0" prefWidth="299.0" promptText="C001" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+            </children>
+         </VBox>
             <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Customer ID" />
-                <TextField fx:id="txtId" editable="false" promptText="C001" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Customer title" />
+                <ComboBox fx:id="combTitle" prefHeight="26.0" prefWidth="274.0" promptText="Mr." style="-fx-background-radius: 8;">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Mr." />
+                            <String fx:value="Mrs." />
+                            <String fx:value="Miss" />
+                            <String fx:value="Ms." />
+                            <String fx:value="Dr." />
+                            <String fx:value="Rev." />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
             </VBox>
             <VBox spacing="5.0" HBox.hgrow="ALWAYS">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Name" />
-                <TextField fx:id="txtName" promptText="Enter full name" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+                <TextField fx:id="txtName" prefHeight="27.0" prefWidth="266.0" promptText="Enter full name" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
             </VBox>
         </HBox>
+      <HBox spacing="20.0">
+         <children>
+            <VBox spacing="5.0">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Date of birth" />
+                  <DatePicker fx:id="dob" prefHeight="26.0" prefWidth="295.0" style="-fx-background-radius: 8;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Salary" />
+                  <TextField fx:id="txtSalary" promptText="Enter your salary" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Address" />
+                  <TextField fx:id="txtAddress" promptText="Enter address" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
 
         <HBox spacing="20.0">
             <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Address" />
-                <TextField fx:id="txtAddress" promptText="Enter address" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="City" />
+                <TextField fx:id="txtCity" prefHeight="27.0" prefWidth="70.0" promptText="Enter city" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
             </VBox>
-            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Contact" />
-                <TextField fx:id="txtContact" promptText="Enter phone number" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+         <VBox prefHeight="50.0" prefWidth="281.0" spacing="5.0">
+            <children>
+               <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Province" />
+               <ComboBox fx:id="combProvince" prefHeight="26.0" prefWidth="290.0" promptText="Select province" style="-fx-background-radius: 8; -fx-border-radius: 8;">
+                   <items>
+                       <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Central" />
+                           <String fx:value="Eastern" />
+                           <String fx:value="North Central" />
+                           <String fx:value="Northern" />
+                           <String fx:value="North Western" />
+                           <String fx:value="Sabaragamuwa" />
+                           <String fx:value="Southern" />
+                           <String fx:value="Uva" />
+                           <String fx:value="Western" />
+                       </FXCollections>
+                    </items>
+               </ComboBox>
+            </children>
+         </VBox>
+            <VBox prefHeight="50.0" prefWidth="51.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Postal code" />
+                <TextField fx:id="txtPostalCode" prefHeight="27.0" prefWidth="317.0" promptText="Enter postal code" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
             </VBox>
-        </HBox>
-
-        <HBox alignment="CENTER_RIGHT" spacing="10.0" VBox.vgrow="ALWAYS">
-            <Button onAction="#btnSaveOnAction" prefHeight="35.0" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="➕ ADD Customer" />
-            <Button onAction="#btnUpdateOnAction" prefHeight="35.0" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="🔄 UPDATE Details" />
-            <Button onAction="#btnDeleteOnAction" prefHeight="35.0" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="❌ DELETE Customer" />
-            <Button onAction="#btnNewOnAction" prefHeight="35.0" style="-fx-background-color: #f3f4f6; -fx-text-fill: #4b5563; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="🧹 CLEAR Form" />
         </HBox>
     </VBox>
 
-    <VBox layoutX="30.0" layoutY="375.0" prefHeight="303.0" prefWidth="930.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
+    <VBox layoutX="30.0" layoutY="396.0" prefHeight="282.0" prefWidth="930.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
         <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1f2937;" text="Existing Customers" />
         <TableView fx:id="tblCustomers" prefHeight="203.0" prefWidth="889.0">
             <columns>
-                <TableColumn fx:id="colId" prefWidth="100.0" text="ID" />
-                <TableColumn fx:id="colName" prefWidth="250.0" text="Name" />
-                <TableColumn fx:id="colAddress" prefWidth="320.0" text="Address" />
-                <TableColumn fx:id="colContact" prefWidth="240.0" text="Contact" />
+                <TableColumn fx:id="colId" prefWidth="76.80001527070999" text="ID" />
+                <TableColumn fx:id="colTitle" prefWidth="81.59998321533203" text="Title" />
+            <TableColumn fx:id="colName" prefWidth="108.80000305175781" text="Name" />
+            <TableColumn fx:id="colDob" prefWidth="86.4000244140625" text="Dob" />
+            <TableColumn fx:id="colSalary" prefWidth="89.59994506835938" text="Salary" />
+            <TableColumn fx:id="colAddress" prefWidth="183.20001220703125" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="86.39996337890625" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="96.800048828125" text="Province" />
+            <TableColumn fx:id="colCode" prefWidth="79.2000732421875" text="Postal Code" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
         </TableView>
     </VBox>
+      <Button layoutX="476.0" layoutY="30.0" onAction="#btnAddOnAction" prefHeight="35.0" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="➕ ADD Customer" />
+      <Button layoutX="601.0" layoutY="30.0" onAction="#btnUpdateOnAction" prefHeight="35.0" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="🔄 UPDATE Details" />
+      <Button layoutX="733.0" layoutY="30.0" onAction="#btnDeleteOnAction" prefHeight="35.0" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="❌ DELETE Customer" />
+      <Button layoutX="874.0" layoutY="30.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #f3f4f6; -fx-text-fill: #4b5563; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="CLEAR Form" />
 
 </AnchorPane>
