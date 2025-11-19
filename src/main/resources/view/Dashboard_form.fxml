@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane prefHeight="782.0" prefWidth="1525.0" style="-fx-background-color: #f8faf9;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.mainController.DashboardController">
+<BorderPane prefHeight="782.0" prefWidth="1525.0" style="-fx-background-color: #f8faf9;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.DashboardController">
 
     <top>
         <HBox alignment="CENTER_LEFT" spacing="15" style="-fx-background-color: linear-gradient(to right, #16a34a, #15803d); -fx-padding: 18 25; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8, 0, 0, 2);">
@@ -76,7 +76,7 @@
             <Separator prefWidth="200" style="-fx-background-color: #e5e7eb;" />
 
             <VBox spacing="10" style="-fx-padding: 15 0 0 0;">
-                <Button onAction="#btnDashboardOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: linear-gradient(to right, #22c55e, #16a34a); -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand;" text="📊  Dashboard">
+                <Button fx:id="btnDashboard" onAction="#btnDashboardOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: linear-gradient(to right, #22c55e, #16a34a); -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand;" text="📊  Dashboard">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -85,25 +85,25 @@
                     </effect>
                 </Button>
 
-                <Button onAction="#btnCustomersOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="👥  Customers">
+                <Button fx:id="btnCustomers" onAction="#btnCustomersOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="👥  Customers">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
 
-                <Button onAction="#btnItemsOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="📦  Items">
+                <Button fx:id="btnItems" onAction="#btnItemsOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="📦  Items">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
 
-                <Button onAction="#btnOrdersOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="🛍  Orders">
+                <Button fx:id="btnOrders" onAction="#btnOrdersOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="🛍  Orders">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
                 </Button>
 
-                <Button onAction="#btnOrderDetailsOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="📋  Order Details">
+                <Button fx:id="btnOrderDetails" onAction="#btnOrderDetailsOnAction" prefHeight="45" prefWidth="210" style="-fx-background-color: #f9fafb; -fx-text-fill: #374151; -fx-background-radius: 10; -fx-font-size: 14px; -fx-alignment: CENTER_LEFT; -fx-padding: 0 0 0 20; -fx-cursor: hand; -fx-border-color: #e5e7eb; -fx-border-width: 1.5; -fx-border-radius: 10;" text="📋  Order Details">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
