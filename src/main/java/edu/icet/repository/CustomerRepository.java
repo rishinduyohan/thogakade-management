@@ -7,7 +7,7 @@ import java.sql.SQLException;
 
 public interface CustomerRepository {
     boolean addCustomer(CustomerDTO customer) throws SQLException;
-    boolean updateCustomer(CustomerDTO customer);
-    boolean deleteCustomer(String id);
+    boolean updateCustomer(String id,CustomerDTO customer) throws SQLException;
+    boolean deleteCustomer(String id) throws SQLException;
     ResultSet getAllCustomers() throws SQLException;
 }

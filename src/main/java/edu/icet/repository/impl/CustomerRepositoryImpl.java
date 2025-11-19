@@ -3,8 +3,6 @@ package edu.icet.repository.impl;
 import edu.icet.db.DBConnection;
 import edu.icet.model.dto.CustomerDTO;
 import edu.icet.repository.CustomerRepository;
-import javafx.scene.control.Alert;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -27,13 +25,24 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     @Override
-    public boolean updateCustomer(CustomerDTO customer) {
-        return false;
+    public boolean updateCustomer(String id,CustomerDTO updatedCustomer) throws SQLException {
+        PreparedStatement statement = DBConnection.getInstance().getConnection().prepareStatement("UPDATE customer SET title=?, name=?,dob=?,salary=?,address=?,city=?,province=?,postalCode=? WHERE cusID='" + id + "'");
+        statement.setObject(1, updatedCustomer.getTitle());
+        statement.setObject(2, updatedCustomer.getName());
+        statement.setObject(3, updatedCustomer.getDob());
+        statement.setObject(4, updatedCustomer.getSalary());
+        statement.setObject(5, updatedCustomer.getAddress());
+        statement.setObject(6, updatedCustomer.getCity());
+        statement.setObject(7, updatedCustomer.getProvince());
+        statement.setObject(8, updatedCustomer.getPostalCode());
+        return statement.executeUpdate() > 0;
     }
 
     @Override
-    public boolean deleteCustomer(String id) {
-        return false;
+    public boolean deleteCustomer(String id) throws SQLException {
+        Statement stm = DBConnection.getInstance().getConnection().createStatement();
+        int res = stm.executeUpdate("DELETE FROM CUSTOMER WHERE cusID = '" + id + "' ");
+        return res > 0;
     }
 
     @Override
