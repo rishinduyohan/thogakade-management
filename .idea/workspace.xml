@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="update Login_form.fxml UI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/icet/db/DBConnection.java" afterDir="false" />
+    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="create service and repository classes in order form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/mainController/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,22 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "dev",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "D:/FX-projects/thogakade-management-system/src/main/java/edu/icet/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/FX-projects/thogakade-management-system/src/main/java/edu/icet/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.icet.Main" />
@@ -121,13 +128,148 @@
       <option name="project" value="LOCAL" />
       <updated>1763143524289</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add mysql dependancy and create db connection using singleton pattern">
+      <option name="closed" value="true" />
+      <created>1763146477731</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763146477732</updated>
+    </task>
+    <task id="LOCAL-00006" summary="create dashboard UI and dashboard controller">
+      <option name="closed" value="true" />
+      <created>1763272175823</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763272175823</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update dashboard UI">
+      <option name="closed" value="true" />
+      <created>1763272761344</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763272761344</updated>
+    </task>
+    <task id="LOCAL-00008" summary="create sample Customer_form ui,controller and dto and load it from dashboard">
+      <option name="closed" value="true" />
+      <created>1763301729433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763301729433</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create customerDTO object">
+      <option name="closed" value="true" />
+      <created>1763310253172</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1763310253172</updated>
+    </task>
+    <task id="LOCAL-00010" summary="create CustomerService layer">
+      <option name="closed" value="true" />
+      <created>1763356620033</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1763356620034</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update project architecture MCV to Layerd">
+      <option name="closed" value="true" />
+      <created>1763544031552</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1763544031552</updated>
+    </task>
+    <task id="LOCAL-00012" summary="create crud operations in customer controller according to layered architecture">
+      <option name="closed" value="true" />
+      <created>1763546102919</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1763546102919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update customer form UI">
+      <option name="closed" value="true" />
+      <created>1763546254235</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1763546254235</updated>
+    </task>
+    <task id="LOCAL-00014" summary="change button styles manually in DashboardController">
+      <option name="closed" value="true" />
+      <created>1763547579494</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1763547579494</updated>
+    </task>
+    <task id="LOCAL-00015" summary="create item management form and controller">
+      <option name="closed" value="true" />
+      <created>1763549784921</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1763549784921</updated>
+    </task>
+    <task id="LOCAL-00016" summary="load item details from item controller through the architecture">
+      <option name="closed" value="true" />
+      <created>1763551904583</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1763551904583</updated>
+    </task>
+    <task id="LOCAL-00017" summary="create crud operations in item controller">
+      <option name="closed" value="true" />
+      <created>1763572451787</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1763572451787</updated>
+    </task>
+    <task id="LOCAL-00018" summary="create order form Ui , model and controller">
+      <option name="closed" value="true" />
+      <created>1763663616842</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1763663616842</updated>
+    </task>
+    <task id="LOCAL-00019" summary="create service and repository classes in order form">
+      <option name="closed" value="true" />
+      <created>1763748441272</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1763748441272</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sync dependancies and create starter class" />
     <MESSAGE value="create Login_form.fxml UI" />
     <MESSAGE value="update Login_form.fxml UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Login_form.fxml UI" />
+    <MESSAGE value="add mysql dependancy and create db connection using singleton pattern" />
+    <MESSAGE value="create dashboard UI and dashboard controller" />
+    <MESSAGE value="update dashboard UI" />
+    <MESSAGE value="create sample Customer_form ui,controller and dto and load it from dashboard" />
+    <MESSAGE value="create customerDTO object" />
+    <MESSAGE value="create CustomerService layer" />
+    <MESSAGE value="update project architecture MCV to Layerd" />
+    <MESSAGE value="create crud operations in customer controller according to layered architecture" />
+    <MESSAGE value="update customer form UI" />
+    <MESSAGE value="change button styles manually in DashboardController" />
+    <MESSAGE value="create item management form and controller" />
+    <MESSAGE value="load item details from item controller through the architecture" />
+    <MESSAGE value="create crud operations in item controller" />
+    <MESSAGE value="create order form Ui , model and controller" />
+    <MESSAGE value="create service and repository classes in order form" />
+    <option name="LAST_COMMIT_MESSAGE" value="create service and repository classes in order form" />
   </component>
 </project>
