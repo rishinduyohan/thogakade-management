@@ -73,10 +73,6 @@ public class CustomerController implements Initializable {
     @FXML
     private TextField txtSalary;
 
-    private void generateNextCustomerId() {
-
-    }
-
     private CustomerDTO getCurrentCustomer() {
         String cusId = txtCusId.getText();
         String title = combTitle.getValue();

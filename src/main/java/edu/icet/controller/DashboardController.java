@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -56,7 +57,7 @@ public class DashboardController {
             AnchorPane.setBottomAnchor(loadedUi, 0.0);
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
         }
     }
 
@@ -106,7 +107,8 @@ public class DashboardController {
 
     @FXML
     void btnOrdersOnAction(ActionEvent event) {
-
+        updateActiveButton(btnOrders);
+        setUi("/view/Order_form.fxml");
     }
 
 }
