@@ -2,20 +2,18 @@ package edu.icet.service.impl;
 
 import edu.icet.model.dto.OrderDTO;
 import edu.icet.repository.OrderRepository;
+import edu.icet.repository.impl.OrderRepositoryImpl;
 import edu.icet.service.OrderService;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
-import lombok.RequiredArgsConstructor;
-
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
-@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
-    private final OrderRepository orderRepository;
+    OrderRepository orderRepository = new OrderRepositoryImpl();
 
     @Override
     public boolean addOrder(OrderDTO order) {
