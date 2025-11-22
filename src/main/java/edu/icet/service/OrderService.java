@@ -12,7 +12,7 @@ public interface OrderService {
     boolean deleteOrder(String id);
     String getCustomerName(String id);
     String getItemName(String id);
-    List<String> getCustomerIdList();
+    ObservableList<String> getCustomerIdList();
     ObservableList<OrderDTO> getAllOrders();
 
 }

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="create service and repository classes in order form">
+    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="remove constructor injection in service class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/mainController/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/LogInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/repository/impl/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/repository/impl/OrderRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/service/impl/OrderServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +247,47 @@
       <option name="project" value="LOCAL" />
       <updated>1763748441272</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update Order_form.fxml Ui">
+      <option name="closed" value="true" />
+      <created>1763748977257</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1763748977257</updated>
+    </task>
+    <task id="LOCAL-00021" summary="update customer controller and dashboard controller">
+      <option name="closed" value="true" />
+      <created>1763749047151</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1763749047151</updated>
+    </task>
+    <task id="LOCAL-00022" summary="update order model attributes and fix controller class constructor injection error">
+      <option name="closed" value="true" />
+      <created>1763836024228</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1763836024228</updated>
+    </task>
+    <task id="LOCAL-00023" summary="update order repositoryImpl">
+      <option name="closed" value="true" />
+      <created>1763836169343</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1763836169343</updated>
+    </task>
+    <task id="LOCAL-00024" summary="remove constructor injection in service class">
+      <option name="closed" value="true" />
+      <created>1763836213654</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1763836213654</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -270,6 +309,11 @@
     <MESSAGE value="create crud operations in item controller" />
     <MESSAGE value="create order form Ui , model and controller" />
     <MESSAGE value="create service and repository classes in order form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create service and repository classes in order form" />
+    <MESSAGE value="update Order_form.fxml Ui" />
+    <MESSAGE value="update customer controller and dashboard controller" />
+    <MESSAGE value="update order model attributes and fix controller class constructor injection error" />
+    <MESSAGE value="update order repositoryImpl" />
+    <MESSAGE value="remove constructor injection in service class" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove constructor injection in service class" />
   </component>
 </project>

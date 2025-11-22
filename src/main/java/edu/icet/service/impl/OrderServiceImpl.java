@@ -1,5 +1,6 @@
 package edu.icet.service.impl;
 
+import edu.icet.model.dto.CustomerDTO;
 import edu.icet.model.dto.OrderDTO;
 import edu.icet.repository.OrderRepository;
 import edu.icet.repository.impl.OrderRepositoryImpl;
@@ -9,6 +10,8 @@ import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class OrderServiceImpl implements OrderService {
@@ -17,16 +20,37 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public boolean addOrder(OrderDTO order) {
+        try {
+            if (orderRepository.addOrder(order)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
+        }
         return false;
     }
 
     @Override
     public boolean updateOrder(String id, OrderDTO order) {
+        try {
+            if (orderRepository.updateOrder(id,order)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
+        }
         return false;
     }
 
     @Override
     public boolean deleteOrder(String id) {
+        try {
+            if (orderRepository.deleteOrder(id)){
+                return true;
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
+        }
         return false;
     }
 
@@ -41,8 +65,21 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List<String> getCustomerIdList() {
-        return List.of();
+    public ObservableList<String> getCustomerIdList() {
+        ObservableList<String> customers = FXCollections.observableArrayList();
+        try {
+            ResultSet resultSet = orderRepository.getCustomerIdList();
+            if (resultSet!=null){
+                while (resultSet.next()){
+                    customers.add(
+                           resultSet.getString(1)
+                   );
+                }
+            }
+        } catch (SQLException e) {
+            new Alert(Alert.AlertType.INFORMATION, e.getMessage()).show();
+        }
+        return customers;
     }
 
     @Override

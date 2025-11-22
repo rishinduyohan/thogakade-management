@@ -57,22 +57,38 @@ public class OrderController implements Initializable {
     }
     @FXML
     void btnClearOnAction(ActionEvent event) {
-
+        txtOrderId.setText("");
+        dateOrder.setValue(LocalDate.now());
+        cmbCustomerId.setValue("Select a customer");
+        txtCustomerName.setText("");
+        txtOrderDetails.setText("");
     }
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
-
+        if (orderService.deleteOrder(txtOrderId.getText())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Order deleted!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @FXML
     void btnPlaceOrderOnAction(ActionEvent event) {
-
+        if (orderService.addOrder(getCurrentOrder())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Order added!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
-
+        if (orderService.updateOrder(txtOrderId.getText(),getCurrentOrder())) {
+            new Alert(Alert.AlertType.CONFIRMATION, "Order updated!").show();
+        }
+        loadTable();
+        btnClearOnAction(event);
     }
 
     @Override
@@ -81,6 +97,7 @@ public class OrderController implements Initializable {
         colDate.setCellValueFactory(new PropertyValueFactory<>("OrderDate"));
         colCustId.setCellValueFactory(new PropertyValueFactory<>("custID"));
         loadTable();
+        setCustomerIds();
         tblOrders.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (null != newValue) {
                 txtOrderId.setText(newValue.getOrderId());
@@ -97,5 +114,8 @@ public class OrderController implements Initializable {
         }else{
             new Alert(Alert.AlertType.ERROR,"Order details are empty!").show();
         }
+    }
+    public void setCustomerIds(){
+        cmbCustomerId.setItems(orderService.getCustomerIdList());
     }
 }
