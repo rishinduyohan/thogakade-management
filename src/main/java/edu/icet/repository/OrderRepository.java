@@ -12,6 +12,6 @@ public interface OrderRepository {
     boolean deleteOrder(String id);
     CustomerDTO getCustomers(String id);
     ItemDTO getItems(String id);
-    ResultSet getCustomerIdList();
+    ResultSet getCustomerIdList() throws SQLException;
     ResultSet getAllOrders() throws SQLException;
 }

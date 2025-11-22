@@ -37,8 +37,9 @@ public class OrderRepositoryImpl implements OrderRepository {
     }
 
     @Override
-    public ResultSet getCustomerIdList() {
-        return null;
+    public ResultSet getCustomerIdList() throws SQLException {
+        Statement statement = DBConnection.getInstance().getConnection().createStatement();
+        return statement.executeQuery("Select * from customer");
     }
 
     @Override
