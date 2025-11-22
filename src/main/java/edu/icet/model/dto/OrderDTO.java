@@ -12,5 +12,5 @@ import java.util.Date;
 public class OrderDTO {
     private String orderId;
     private String orderDate;
-    private String cusId;
+    private String custID;
 }

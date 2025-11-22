@@ -1,8 +1,8 @@
 package edu.icet.controller;
 
-import edu.icet.model.dto.CustomerDTO;
 import edu.icet.model.dto.OrderDTO;
 import edu.icet.service.OrderService;
+import edu.icet.service.impl.OrderServiceImpl;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,16 +10,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import lombok.RequiredArgsConstructor;
 
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-@RequiredArgsConstructor
 public class OrderController implements Initializable {
 
-    private final OrderService orderService;
+     OrderService orderService = new OrderServiceImpl();
 
     @FXML
     private ComboBox<String> cmbCustomerId;
@@ -79,17 +77,18 @@ public class OrderController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        colOrderId.setCellValueFactory(new PropertyValueFactory<>("orderId"));
-        colDate.setCellValueFactory(new PropertyValueFactory<>("orderDate"));
-        colCustId.setCellValueFactory(new PropertyValueFactory<>("custId"));
+        colOrderId.setCellValueFactory(new PropertyValueFactory<>("OrderId"));
+        colDate.setCellValueFactory(new PropertyValueFactory<>("OrderDate"));
+        colCustId.setCellValueFactory(new PropertyValueFactory<>("custID"));
         loadTable();
         tblOrders.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (null != newValue) {
                 txtOrderId.setText(newValue.getOrderId());
                 dateOrder.setValue(LocalDate.parse(newValue.getOrderDate()));
-                cmbCustomerId.setValue(newValue.getCusId());
+                cmbCustomerId.setValue(newValue.getCustID());
             }
         });
+
     }
     private void loadTable(){
         ObservableList<OrderDTO> orderDTOS = orderService.getAllOrders();
