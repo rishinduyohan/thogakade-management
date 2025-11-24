@@ -13,20 +13,20 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="orderPane" prefHeight="702.0" prefWidth="1015.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.OrderController">
+<AnchorPane fx:id="orderPane" prefHeight="702.0" prefWidth="908.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.controller.OrderController">
 
     <!-- Page Header -->
     <Label layoutX="30.0" layoutY="24.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #1f2937;" text="Order Management" />
-    <Label layoutX="30.0" layoutY="60.0" style="-fx-font-size: 13px; -fx-text-fill: #6b7280;" text="Place new orders, view order history, and manage daily transactions." />
+    <Label layoutX="30.0" layoutY="60.0" prefHeight="19.0" prefWidth="392.0" style="-fx-font-size: 13px; -fx-text-fill: #6b7280;" text="Place new orders, view order history, and manage daily transactions." />
 
     <!-- Action Buttons -->
-    <Button layoutX="476.0" layoutY="30.0" onAction="#btnPlaceOrderOnAction" prefHeight="35.0" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="➕ Place Order" />
-    <Button layoutX="601.0" layoutY="30.0" onAction="#btnUpdateOnAction" prefHeight="35.0" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="🔄 UPDATE Order" />
-    <Button layoutX="740.0" layoutY="30.0" onAction="#btnDeleteOnAction" prefHeight="35.0" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="❌ DELETE Order" />
-    <Button layoutX="874.0" layoutY="30.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #f3f4f6; -fx-text-fill: #4b5563; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="CLEAR Form" />
+    <Button layoutX="448.0" layoutY="30.0" onAction="#btnPlaceOrderOnAction" prefHeight="35.0" style="-fx-background-color: #10b981; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="➕ Place Order" />
+    <Button layoutX="553.0" layoutY="30.0" onAction="#btnUpdateOnAction" prefHeight="35.0" prefWidth="116.0" style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="🔄 UPDATE Order" />
+    <Button layoutX="676.0" layoutY="30.0" onAction="#btnDeleteOnAction" prefHeight="35.0" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="❌ DELETE Order" />
+    <Button layoutX="793.0" layoutY="30.0" onAction="#btnClearOnAction" prefHeight="35.0" prefWidth="98.0" style="-fx-background-color: #f3f4f6; -fx-text-fill: #4b5563; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="CLEAR Form" />
 
     <!-- Order Details Form Container -->
-    <VBox layoutX="30.0" layoutY="98.0" prefHeight="200.0" prefWidth="930.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
+    <VBox layoutX="-2.0" layoutY="98.0" prefHeight="215.0" prefWidth="883.0" spacing="15.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
         <effect>
             <DropShadow color="#00000011" radius="8.0" spread="0.1" />
         </effect>
@@ -48,7 +48,7 @@
             <!-- Customer ID ComboBox -->
             <VBox prefWidth="250.0" spacing="5.0">
                 <Label prefHeight="18.0" prefWidth="82.0" style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Customer ID" />
-                <ComboBox fx:id="cmbCustomerId" prefHeight="27.0" prefWidth="250.0" promptText="Select Customer" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+                <ComboBox fx:id="cmbCustomerId" onAction="#cmdCustomerOnAction" prefHeight="27.0" prefWidth="250.0" promptText="Select Customer" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
             </VBox>
         </HBox>
 
@@ -58,17 +58,17 @@
             <!-- Customer Name (Read Only) -->
             <VBox spacing="5.0" HBox.hgrow="ALWAYS">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Customer Name" />
-                <TextField fx:id="txtCustomerName" editable="false" prefHeight="27.0" promptText="Customer Name will appear here" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8; -fx-background-color: #f9fafb;" />
+                <TextField fx:id="txtCustomerName" editable="false" prefHeight="27.0" prefWidth="526.0" promptText="Customer Name will appear here" style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8; -fx-background-color: #f9fafb;" />
             </VBox>
             <VBox spacing="5.0">
                 <Label style="-fx-font-size: 12px; -fx-text-fill: #6b7280;" text="Item" />
-                <TextField fx:id="txtOrderDetails" editable="false" prefHeight="27.0" prefWidth="398.0" promptText="Keerisamba 5Kg " style="-fx-background-radius: 8; -fx-border-color: #e5e7eb; -fx-border-radius: 8;" />
+            <Button onAction="#btnShowItemsOnAction" prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: #10b985; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;" text="Show items" />
             </VBox>
         </HBox>
     </VBox>
 
     <!-- Order History Table -->
-    <VBox layoutX="30.0" layoutY="320.0" prefHeight="358.0" prefWidth="930.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
+    <VBox layoutX="-1.0" layoutY="320.0" prefHeight="358.0" prefWidth="883.0" spacing="10.0" style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 12; -fx-border-color: #e5e7eb; -fx-border-width: 1; -fx-border-radius: 12;">
         <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1f2937;" text="Order History" />
         <TableView fx:id="tblOrders" prefHeight="296.0" prefWidth="889.0">
             <columns>

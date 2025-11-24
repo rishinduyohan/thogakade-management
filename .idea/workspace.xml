@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="remove constructor injection in service class">
+    <list default="true" id="cb05041c-20bf-4791-84ea-a2e629aabacf" name="Changes" comment="create bill print form">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/view/Monthly_tasks.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/repository/impl/OrderRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/repository/impl/OrderRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/icet/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Customer_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Customer_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Item_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Item_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/view/Order_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -287,11 +287,34 @@
       <option name="project" value="LOCAL" />
       <updated>1763836213654</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="create crud operations in order form">
+      <option name="closed" value="true" />
+      <created>1763840024739</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1763840024739</updated>
+    </task>
+    <task id="LOCAL-00026" summary="create additional functions in order controller">
+      <option name="closed" value="true" />
+      <created>1763972326989</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1763972326990</updated>
+    </task>
+    <task id="LOCAL-00027" summary="create bill print form">
+      <option name="closed" value="true" />
+      <created>1763972352665</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1763972352665</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sync dependancies and create starter class" />
     <MESSAGE value="create Login_form.fxml UI" />
     <MESSAGE value="update Login_form.fxml UI" />
     <MESSAGE value="add mysql dependancy and create db connection using singleton pattern" />
@@ -314,6 +337,9 @@
     <MESSAGE value="update order model attributes and fix controller class constructor injection error" />
     <MESSAGE value="update order repositoryImpl" />
     <MESSAGE value="remove constructor injection in service class" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove constructor injection in service class" />
+    <MESSAGE value="create crud operations in order form" />
+    <MESSAGE value="create additional functions in order controller" />
+    <MESSAGE value="create bill print form" />
+    <option name="LAST_COMMIT_MESSAGE" value="create bill print form" />
   </component>
 </project>
