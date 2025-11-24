@@ -11,7 +11,7 @@ public interface OrderService {
     boolean updateOrder(String id,OrderDTO order);
     boolean deleteOrder(String id);
     String getCustomerName(String id);
-    String getItemName(String id);
+    ObservableList<String> getItemName(String id);
     ObservableList<String> getCustomerIdList();
     ObservableList<OrderDTO> getAllOrders();
 

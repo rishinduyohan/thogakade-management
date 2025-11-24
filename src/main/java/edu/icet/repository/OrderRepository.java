@@ -10,8 +10,9 @@ public interface OrderRepository {
     boolean addOrder(OrderDTO order) throws SQLException;
     boolean updateOrder(String id,OrderDTO order) throws SQLException;
     boolean deleteOrder(String id) throws SQLException;
-    CustomerDTO getCustomers(String id);
-    ItemDTO getItems(String id);
-    ResultSet getCustomerIdList() throws SQLException;
+    ResultSet getCustomer(String id) throws SQLException;
+    ResultSet filterItemCode(String id) throws SQLException;
+    ResultSet getItems(String id);
+    ResultSet getCustomerList() throws SQLException;
     ResultSet getAllOrders() throws SQLException;
 }

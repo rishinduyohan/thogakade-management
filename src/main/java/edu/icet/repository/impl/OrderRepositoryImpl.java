@@ -34,19 +34,27 @@ public class OrderRepositoryImpl implements OrderRepository {
         PreparedStatement statement = DBConnection.getInstance().getConnection().prepareStatement("Delete from orders where orderID='"+id+"'");
         return statement.executeUpdate()>0;
     }
+    @Override
+    public ResultSet getCustomer(String id) throws SQLException {
+        Statement statement = DBConnection.getInstance().getConnection().createStatement();
+        return statement.executeQuery("Select * from customer where cusID='"+id+"'");
+    }
 
     @Override
-    public CustomerDTO getCustomers(String id) {
+    public ResultSet filterItemCode(String id) throws SQLException {
+        Statement statement = DBConnection.getInstance().getConnection().createStatement();
+        return statement.executeQuery("Select * from orderDetail where orderId='"+id+"'");
+    }
+
+    @Override
+    public ResultSet getItems(String id) {
+//        Statement statement = DBConnection.getInstance().getConnection().createStatement();
+//        return statement.executeQuery("Select * from customer");
         return null;
     }
 
     @Override
-    public ItemDTO getItems(String id) {
-        return null;
-    }
-
-    @Override
-    public ResultSet getCustomerIdList() throws SQLException {
+    public ResultSet getCustomerList() throws SQLException {
         Statement statement = DBConnection.getInstance().getConnection().createStatement();
         return statement.executeQuery("Select * from customer");
     }
